@@ -1,3 +1,4 @@
+import "./Nav.css";
 import { NavLink } from "react-router-dom";
 import { IoIosSearch } from "react-icons/io";
 import { BiUserCircle } from "react-icons/bi";
@@ -27,7 +28,7 @@ const NavBar = () => {
             open ? "left-0" : "-left-96"
           }`}
         >
-          <NavLink to="/homeData">Home</NavLink>
+          <NavLink to="/home">Home</NavLink>
           <NavLink to="/shop">Shop</NavLink>
           <NavLink>Categories</NavLink>
           <NavLink>Products</NavLink>
@@ -40,9 +41,22 @@ const NavBar = () => {
         <NavLink>
           <IoIosSearch />
         </NavLink>
-        <NavLink>
-          <BiUserCircle />
-        </NavLink>
+        <section>
+          <div className="dropdown">
+            <button className="dropbtn">
+              <BiUserCircle />
+            </button>
+            <div className="dropdown-item bg-gray-300 text-gray-800">
+              <NavLink to="/loginFrom">My Account</NavLink>
+              <br />
+              <hr />
+              <NavLink to="/Wishlist">Wishlist</NavLink>
+              <br />
+              <hr />
+              <NavLink to="/loginFrom">Login</NavLink>
+            </div>
+          </div>
+        </section>
         <NavLink to="/shoppingCart">
           <MdOutlineShoppingCart />
         </NavLink>
