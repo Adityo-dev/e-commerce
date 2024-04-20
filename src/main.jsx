@@ -5,7 +5,10 @@ import { createBrowserRouter, RouterProvider } from "react-router-dom";
 import Home from "./Home";
 import Hero from "./Components/Header/Hero";
 import HomeData from "./Components/HomeData";
-import ShoppingCart from "./Components/ShoppingCart/ShoppingCart";
+import ShoppingCart from "./Components/AddShoppingCart/AddShoppingCart";
+import LoginForm from "./Components/Account/LoginForm/LoginForm";
+import CreateAccount from "./Components/Account/CreateAccount/CreateAccount";
+import Wishlist from "./Components/Wishlist/Wishlist";
 
 const router = createBrowserRouter([
   {
@@ -13,7 +16,7 @@ const router = createBrowserRouter([
     element: <Home />,
     children: [
       {
-        path: "/homeData",
+        path: "/home",
         element: <HomeData />,
       },
       {
@@ -23,6 +26,22 @@ const router = createBrowserRouter([
       {
         path: "/shoppingCart",
         element: <ShoppingCart />,
+      },
+      {
+        path: "/CreateAccount",
+        element: <CreateAccount />,
+      },
+      {
+        path: "/Wishlist",
+        element: <Wishlist />,
+      },
+      {
+        path: "/home",
+        element: <HomeData />,
+      },
+      {
+        path: "/loginFrom",
+        element: <LoginForm />,
       },
     ],
   },
