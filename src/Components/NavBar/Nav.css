@@ -1,0 +1,18 @@
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-item {
+  font-size: 1.2rem;
+  display: none;
+  position: absolute;
+  min-width: 160px;
+  padding: 10px 20px;
+  border-radius: 0 20px 20px 20px;
+  z-index: 100;
+}
+
+.dropdown:hover .dropdown-item {
+  display: block;
+}
